@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int power(int n, int x)
+{
+    if (x == 0)
+    {c
+        return 1;
+    }
+    else if (x % 2 == 0)
+    {
+        return power(n, x / 2) * power(n, x / 2);
+    }
+    else
+    {
+        return n * power(n, x / 2) * power(n, x / 2);
+    }
+}
+
+int main()
+{
+    int a;
+    cout << "Enter the number base : ";
+    cin >> a;
+    int b;
+    cout << "Enter the number power : ";
+    cin >> b;
+    cout << power(a, b) << endl;
+}
